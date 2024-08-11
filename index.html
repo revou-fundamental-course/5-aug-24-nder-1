@@ -11,7 +11,9 @@
         <div class="left-column">
             <div class="kalkulator-bmi">
                 <h1>Kalkulator BMI</h1>
-                <p>Berat badan ideal impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI.</p>
+                <p>Berat badan ideal impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, 
+                    berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang 
+                    di kalkulator BMI.</p>
 
                 <form id="bmiForm">
                     <div class="form-group">
@@ -31,16 +33,19 @@
                         <label for="height">Tinggi Badan (cm)</label>
                         <input type="number" id="height" name="height" required>
                     </div>
-                    <button type="button" onclick="hitungBMI()">Hitung BMI</button>
-                    <button type="reset">Reset</button>
+                    <button id="button" onclick="hitungBMI()">Hitung BMI</button>
+                    <button id="reset">Reset</button>
                 </form>
 
                 <h3>Keunggulan fitur</h3>
-                <ul>
-                    <li>Menghitung berat badan</li>
-                    <li>Menentukan kategori berat badan ideal atau tidak</li>
-                    <li>Mempersiapkan program penurunan berat badan</li>
+                <ul class="keunggulan">
+                    <li>1. Menghitung berat badan</li>
+                    <li>2. Menentukan kategori berat badan ideal atau tidak</li>
+                    <li>3. Mempersiapkan program penurunan berat badan</li>
                 </ul>
+                <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, 
+                    berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di 
+                    BMI Kalkulator.</p>
             </div>
         </div>
 
@@ -50,16 +55,22 @@
                 <p id="bmiResult">Silakan masukkan data untuk menghitung BMI.</p>
                 <button id="downloadBtn" style="display:none;">Download Hasil BMI</button>
                 <p id="bmiInterpretation"></p>
-                <h3>Beberapa penyakit yang berasal dari kegemukan</h3>
-                <ul>
-                    <li>Diabetes</li>
-                    <li>Hipertensi</li>
-                    <li>Sakit Jantung</li>
-                    <li>Osteoarthritis</li>
-                </ul>
+                <form>
+                    <h3 class="bbrp">Beberapa penyakit yang berasal dari kegemukan:</h3>
+                    <ul class="penyakit">
+                        <li>Diabetes</li>
+                        <li>Hipertensi</li>
+                        <li>Sakit Jantung</li>
+                        <li>Osteoarthritis</li>
+                    </ul>
+                </form>
             </div>
         </div>
-    </div>
+    </div> 
+
+    <footer>
+        <p>Made by Sander</p>
+    </footer>
 
     <script src="js\script.js"></script>
 </body>
