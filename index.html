@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator BMI</title>
-    <link rel="stylesheet" href="css\styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="container">
@@ -15,7 +15,7 @@
                     berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang 
                     di kalkulator BMI.</p>
 
-                <form id="bmiForm">
+                <form id="bmiForm" onsubmit="return false;">
                     <div class="form-group">
                         <label for="gender">Jenis Kelamin</label><br>
                         <input type="radio" id="pria" name="gender" value="Pria"> Pria
@@ -32,46 +32,47 @@
                     <div class="form-group">
                         <label for="age">Usia (tahun)</label>
                         <input type="number" id="age" name="age" required>
-                    </div>                    
-                    <button id="button" onclick="hitungBMI()">Hitung BMI</button>
-                    <button id="reset">Reset</button>
+                    </div>
+                    <button class="button" onclick="hitungBMI()">Hitung BMI</button>
+                    <button class="reset" onclick="resetForm()">Reset</button>
                 </form>
 
                 <h3>Keunggulan fitur</h3>
-                <ul class="keunggulan">
-                    <li>1. Menghitung berat badan</li>
-                    <li>2. Menentukan kategori berat badan ideal atau tidak</li>
-                    <li>3. Mempersiapkan program penurunan berat badan</li>
+                <ul>
+                    <p>1. Menghitung berat badan</br>
+                    2. Menentukan kategori berat badan ideal atau tidak</br>
+                    3. Mempersiapkan program penurunan berat badan</p>
+                    <p>Bisa dibilang, rumus BMI tidaklah sepenuhnya akurat dan akan dimaknai berbeda pada kasus tertentu. 
+                        Misalkan bagi atlet binaraga dan ibu hamil, angka BMI yang tinggi tidak berarti bahwa mereka memiliki 
+                        lemak berlebih atau tidak sehat. Selain itu, pada anak-anak dan remaja, perhitungan ini perlu disesuaikan 
+                        dengan usia maupun jenis kelaminnya.</p>
                 </ul>
-                <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, 
-                    berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di 
-                    BMI Kalkulator.</p>
             </div>
         </div>
 
         <div class="right-column">
-            <div class="hasil-bmi">
+            <div class="hasil-bmi-container">
                 <h2>Hasil</h2>
-                <p id="bmiResult">Silakan masukkan data untuk menghitung BMI.</p>
-                <button id="downloadBtn" style="display:none;">Download Hasil BMI</button>
-                <p id="bmiInterpretation"></p>
-                <form>
-                    <h3 class="bbrp">Beberapa penyakit yang berasal dari kegemukan:</h3>
-                    <ul class="penyakit">
-                        <li>Diabetes</li>
-                        <li>Hipertensi</li>
-                        <li>Sakit Jantung</li>
-                        <li>Osteoarthritis</li>
-                    </ul>
-                </form>
+                <h4>Isi data untuk mengetahui BMI anda..</h4>
+                <div class="hasil-bmi" id="hasilBMI" style="display:none;">
+                    <h2 id="statusBMI"></h2>
+                    <p id="bmiValue" class="bmi-value"></p>
+                    <p id="keteranganBMI"></p>
+                    <button id="downloadBtn" class="download-btn" style="display:none;">Download Hasil BMI</button>
+                </div>
+                <div id="penjelasan" class="penjelasan-bmi" style="display:none;">
+                    <p id="penjelasanBMI"></p>
+                    <p id="penjelasan2BMI"></p>
+                    <p id="solusi"></p>
+                </div>
             </div>
         </div>
-    </div> 
+    </div>
 
     <footer>
         <p>Made by Sander</p>
     </footer>
 
-    <script src="js\script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
